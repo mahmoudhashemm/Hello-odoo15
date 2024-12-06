@@ -11,9 +11,7 @@ services:
     volumes:
         - ./postgresql:/var/lib/postgresql/data
     mem_limit: 6g  # تحديد الحد الأقصى للذاكرة 6 جيجابايت
-    cpus: 12      # تحديد عدد الأنوية المستخدمة بـ 12 كور
-    storage_opt:
-      size: 200G   # تحديد مساحة التخزين القصوى 200 جيجابايت
+    cpus: 6      # تحديد عدد الأنوية المستخدمة بـ 12 كور
   odoo15:
     image: mahmoudhashemm/odoo-15:last
 
@@ -36,9 +34,7 @@ services:
   #    - ./entrypoint.sh:/entrypoint.sh
     restart: always
     mem_limit: 6g  # تحديد الحد الأقصى للذاكرة 6 جيجابايت
-    cpus: 12      # تحديد عدد الأنوية المستخدمة بـ 12 كور
-    storage_opt:
-    size: 200G   # تحديد مساحة التخزين القصوى 200 جيجابايت
+    cpus: 6      # تحديد عدد الأنوية المستخدمة بـ 12 كور
 
   # pgadmin:
   #   image: fenglc/pgadmin4
